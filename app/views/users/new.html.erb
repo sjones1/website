@@ -1,3 +1,29 @@
 <% provide(:title, "Sign Up") %>
 <h1>Sign up</h1>
-<p>This will be a signup page for new users.</p>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+<table>
+   <%= form_for @user do |u| %>
+   <%= render 'shared/error_messages' %>
+<tr>
+<td>   <%= u.label :name, "Name:" %>
+<td width=5px">
+<td>   <%= u.text_field :name, class: 'form-control' %>
+<tr>
+<td>   <%= u.label :email, "e-mail:" %>
+<td width="5px">
+<td>   <%= u.email_field :email %>
+<tr>
+<td>   <%= u.label :password, "Password:" %>
+<td width="5px">
+<td>   <%= u.password_field :password %>
+<tr>
+<td>   <%= u.label :password_confirmation, "Confirmation:" %>
+<td width="5px">
+<td>   <%= u.password_field :password_confirmation %>
+<tr><td>   <%= u.submit 'Submit', class: "btn btn-primary" %>
+   <% end %>
+</table>
+  </div>
+</div>
