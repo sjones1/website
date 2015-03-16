@@ -6,6 +6,10 @@
                                   data: { confirm: "Are you sure you want to delete #{user.name}?" } %>
   <% end %>
 
+  <% if current_user.admin? %>
+    | <%= link_to "edit", edit_user_path(user), data: { confirm: "Are you sure you want to edit #{user.name}?" } %>
+  <% end %>
+
 
 
 </li>
