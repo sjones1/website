@@ -6,9 +6,6 @@
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
-      <section class="stats">
-        <%= render 'shared/stats' %>
-      </section>
 
       <section class="micropost_form">
         <%= render 'shared/micropost_form' %>
@@ -23,18 +20,21 @@
 
 
   <div class="center jumbotron">
-    <h1>Welcome to the Sample App</h1>
+    <h1>Welcome to explorebotswana.com</h1>
 
     <h2>
-      This is the home page for the
-      <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-      sample application.
+      Here you can find information about our
+    <a href="http://www.outlookexpeditions.com/" target="blank">outlook expedition</a>
+      to Botswana in 2016.
     </h2>
-
+<br>
+<br>
+    <p>To keep up to date about fundraising events and expedition news please create and account, else you can find more information on the about page. </p>
+<br>
+<br>
     <%= link_to "New User? No problem, sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-  </div>
 
-  <%= link_to image_tag("rails.png", alt: "Rails logo"),
-            'http://rubyonrails.org/' %>
+<%= link_to image_tag("startyourlogo.png", alt: "About the Expedition", :align=>"middle"),
+            about_path, :align=>"middle" %> </div>
 
 <% end %>

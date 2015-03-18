@@ -9,7 +9,8 @@ class RelationshipsController < ApplicationController
       format.html { redirect_to @user }
       format.js
     end
-
+    flash[:success] = "successful follow"
+    redirect_to root_url
   end
 
   def destroy
@@ -19,7 +20,8 @@ class RelationshipsController < ApplicationController
       format.html { redirect_to @user }
       format.js
     end
-
+    flash[:success] = "successful follow"
+    redirect_to root_url
   end
 
 

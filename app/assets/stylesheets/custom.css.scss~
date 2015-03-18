@@ -250,15 +250,14 @@ span.picture {
   color: #000;
 }
 
-.dropdown-toggle {
+.dropdown {
   background-color: #468d61;
   border-color: #fff;
   color: #fff;
 }
 
-.dropdown-toggle:hover {
+.dropdown:hover {
   background-color: #fff;
   color: #000;
 }
-
 

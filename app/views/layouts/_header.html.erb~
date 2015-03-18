@@ -5,11 +5,10 @@
     
       <ul class="nav navbar-nav navbar-right">
         <li class="btn-default"><%= link_to "Home", root_path, id:'logo2' %></li>
-        <li class="btn-default"><%= link_to "About", about_path, id:'logo2' %></li>
         <li class="btn-default"><%= link_to "Help", help_path, id:'logo2' %></li>
         <% if logged_in? %>
           <li class="btn-default">  <% if current_user.admin? %>  <%= link_to "Users", users_path, id:'logo2' %>  <% end %>   </li>
-          <li class="dropdown" class="btn-default" id="logo2">
+          <li class="dropdown" class="btn-default">
             <a href="#"  data-toggle="dropdown" id="logo2">
               Account <b class="caret"></b>
             </a>

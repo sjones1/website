@@ -51,6 +51,7 @@ class User < ActiveRecord::Base
                      OR user_id = :user_id", user_id: id)  
   end
 
+
   def follow(other_user)
     active_relationships.create(followed_id: other_user.id)
   end
