@@ -10,7 +10,8 @@ User.create!(name:  "Sam Jones",
              email: "ipadfan.jones@googlemail.com",
              password:              "test1234",
              password_confirmation: "test1234",
-             admin: true)
+             admin: true,
+             teacher: true)
 
 99.times do |n|
   name  = Faker::Name.name
