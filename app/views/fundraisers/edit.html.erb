@@ -8,15 +8,15 @@
     <%= render 'shared/error_messages', object: f.object %>
 <tr>
 <td>      <%= f.label :title, "Title:" %>
-<td width=5px">
+<td width="5px">
 <td>      <%= f.text_field :title, :placeholder => "Title..." %>
 <td width="5px">
 <td>      <%= f.label :date, "Date:" %>
-<td width=5px">
+<td width="5px">
 <td>      <%= f.date_select(:date, :start_year => 2015) %>
 <tr>
 <td>      <%= f.label :content, "Details:" %>
-<td width=5px">
+<td width="5px">
 </table>      <%= f.text_area :content, :placeholder => "Include your description here.", :cols => "60", :rows => "10" %>
 <table>
 <tr>
