@@ -12,7 +12,7 @@
 
 <% if current_user.teacher? %>
 |
-<%= link_to " edit", edit_fundraiser_path(f) %> | 
+<%= link_to " edit", edit_fundraiser_path(f), data: {no_turbolink: true} %> | 
 <%= link_to " delete", "fundraisers/#{f.id}", method: :delete, data: {confirm: "Are you sure you want to delete #{f.title} ?" } %>
 <% end %>
 </h4>
