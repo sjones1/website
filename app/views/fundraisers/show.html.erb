@@ -1,0 +1,9 @@
+<% provide(:title, @fundraiser.title) %>
+<h2>
+<%= @fundraiser.title %>, on <%= @fundraiser.date %>
+</h2>
+<br>
+<p>
+<%= @fundraiser.content %>
+</p>
+<%= link_to "Show all", fundraiser_path %>

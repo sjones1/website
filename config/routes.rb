@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
 
+  get 'new_fundraiser' => 'fundraisers#new'
+  get 'fundraiser' => 'fundraisers#index'
   get 'donate' => 'static_pages#donate'
   get 'home' => 'static_pages#home'
   get 'help' => 'static_pages#help'
@@ -19,7 +21,7 @@ Rails.application.routes.draw do
     end
   end
 
-
+  resources :fundraisers
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
 end

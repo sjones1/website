@@ -38,3 +38,6 @@ followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
 
+Fundraiser.create!(title: "title",
+                   content: "testing content to see if it works",
+                   date: "20/07/2016")

@@ -9,21 +9,23 @@
         <li class="btn-default"><%= link_to "Help", help_path, id:'logo2' %></li>
         <% if logged_in? %>
           <li class="btn-default">  <% if current_user.admin? %>  <%= link_to "Users", users_path, id:'logo2' %>  <% end %>   </li>
+          <li class="btn-default"> <%= link_to "Fundraisers", fundraiser_path, id:'logo2' %> </li>
           <li class="dropdown" class="btn-default" id="logo2">
             <a href="#"  data-toggle="dropdown" id="logo2">
               Account <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Edit", edit_user_path(current_user) %></li>
+              <li class="btn-default"><%= link_to "Profile", current_user %></li>
+              <li class="btn-default"><%= link_to "Edit", edit_user_path(current_user) %></li>
+              <li class="btn-default"> <%= link_to "Fundraisers", fundraiser_path %> </li>
               <li class="divider"></li>
               <li class="btn-default">
-                <%= link_to "Log out", logout_path, method: "delete", id:'logo2' %>
+                <%= link_to "Log out", logout_path, method: "delete", id:'logo2', data: {no_turbolink: true} %>
               </li>
             </ul>
           </li>
         <% else %>
-          <li class="btn-default"><%= link_to "Log in", login_path, id:'logo2' %></li>
+          <li class="btn-default"><%= link_to "Log in", login_path, id:'logo2', data: {no_turbolink: true} %></li>
         <% end %>
       </ul>
     

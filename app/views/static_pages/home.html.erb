@@ -24,7 +24,7 @@
 
     <h2>
       Here you can find information about our
-    <a href="http://www.outlookexpeditions.com/" target="blank">outlook expedition</a>
+    <a href="http://www.outlookexpeditions.com/" target="blank" data-no-turbolink>outlook expedition</a>
       to Botswana in 2016.
     </h2>
 <br>
@@ -32,7 +32,7 @@
     <p>To keep up to date about fundraising events and expedition news please create and account, else you can find more information on the about page. </p>
 <br>
 <br>
-    <%= link_to "New User? No problem, sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "New User? No problem, sign up now!", signup_path, data: {no_turbolink: true}, class: "btn btn-lg btn-primary" %>
 
 <%= link_to image_tag("startyourlogo.png", alt: "About the Expedition", :align=>"middle"),
             about_path, :align=>"middle" %> </div>

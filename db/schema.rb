@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150322171808) do
+ActiveRecord::Schema.define(version: 20150323220047) do
+
+  create_table "fundraisers", force: :cascade do |t|
+    t.text     "title"
+    t.text     "content"
+    t.date     "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "fundraisers", ["title"], name: "index_fundraisers_on_title", unique: true
 
   create_table "microposts", force: :cascade do |t|
     t.text     "title"

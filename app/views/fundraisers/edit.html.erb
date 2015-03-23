@@ -1,0 +1,40 @@
+<% provide(:title, "Editing #{@fundraiser.title}") %>
+<h1> New Event: </h1>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-3">
+<table>
+    <%= form_for @fundraiser do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+<tr>
+<td>      <%= f.label :title, "Title:" %>
+<td width=5px">
+<td>      <%= f.text_field :title, :placeholder => "Title..." %>
+<td width="5px">
+<td>      <%= f.label :date, "Date:" %>
+<td width=5px">
+<td>      <%= f.date_select(:date, :start_year => 2015) %>
+<tr>
+<td>      <%= f.label :content, "Details:" %>
+<td width=5px">
+</table>      <%= f.text_area :content, :placeholder => "Include your description here.", :cols => "60", :rows => "10" %>
+<table>
+<tr>
+<td>
+<td width="10px">
+<td>      <%= f.submit "Publish", class: "btn btn-primary" %>
+    <% end %>
+</table>
+
+<br>
+
+Points for the description may include: <br>
+<ul>
+<li>Details such as when and where the activity will take place </li>
+<li>What the activity is </li>
+<li>How people can donate/sponsor </li>
+<li>How to book, if booking is necessary </li>
+</ul>
+  </div>
+</div>
+

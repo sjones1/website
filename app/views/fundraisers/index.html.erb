@@ -1,0 +1,25 @@
+<% provide(:title, "Events") %>
+
+
+<h1>Fundraising events! </h1>
+<% if current_user.teacher? %>
+<center><%= link_to "Create a fundraising activity!", new_fundraiser_url, class:"btn btn-primary", data: {no_turbolink: true} %></center>
+<% end %>
+<ul class="users">
+  <% @fundraisers.each do |f| %>
+    <li>
+      <h4><%= f.title %> on <%= f.date %>  <%= link_to "more details...", "fundraisers/#{f.id}" %>
+
+<% if current_user.teacher? %>
+|
+<%= link_to " edit", edit_fundraiser_path(f) %> | 
+<%= link_to " delete", "fundraisers/#{f.id}", method: :delete, data: {confirm: "Are you sure you want to delete #{f.title} ?" } %>
+<% end %>
+</h4>
+
+    </li>
+  <% end %>
+</ul>
+
+
+

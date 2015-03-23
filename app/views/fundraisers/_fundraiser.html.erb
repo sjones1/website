@@ -1,0 +1,7 @@
+<li>
+  <h3><%= fundraiser.title %>, on <%= fundraiser.date %>.</h3><br>
+  <span><%= fundraiser.content %></span>
+  <%= link_to "Edit", edit_fundraiser_path(fundraiser) %>
+    | <%= link_to "delete", fundraiser, method: :delete,
+                                  data: { confirm: "Are you sure you want to delete #{fundraiser.name}?" } %>
+</li>
