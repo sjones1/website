@@ -29,8 +29,7 @@ class FundraisersController < ApplicationController
   end
 
   def update
-    @fundraiser = Fundraiser.new(fundraiser_params)
-    if @fundraiser.update_attributes(user_params)
+    if @fundraiser.update_attributes(fundraiser_params)
       flash[:success] = "Fundraiser Updated"
       redirect_to @fundraiser
     else
