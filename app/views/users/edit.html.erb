@@ -18,6 +18,10 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
+
+      <%= f.label :teacher, "Teacher?" %>
+      <%= f.check_box :teacher, class: 'form-control' %>
+
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
 

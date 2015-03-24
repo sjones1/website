@@ -32,7 +32,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update_attributes(user_params)
+    if @user.update_attributes(user2_params)
       flash[:success] = "Update successful"
       redirect_to home_url
     else
@@ -52,6 +52,12 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation)
+    end
+
+
+    def user2_params
+      params.require(:user).permit(:name, :email, :password,
+                                   :password_confirmation, :teacher)
     end
 
     def correct_user

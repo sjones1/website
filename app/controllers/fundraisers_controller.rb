@@ -1,7 +1,6 @@
 class FundraisersController < ApplicationController
   before_action :logged_in_user, only: [:new, :create, :show, :index, :edit, :update, :destroy]
   before_action :teacher_user, only: [:new, :create, :edit, :update, :destroy]
-
   def show
     @fundraiser = Fundraiser.find(params[:id])
   end
