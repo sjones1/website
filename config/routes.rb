@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'articles/new'
+
   root 'static_pages#home'
 
   get 'new_fundraiser' => 'fundraisers#new'
@@ -24,4 +26,5 @@ Rails.application.routes.draw do
   resources :fundraisers
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
+  resources :articles
 end

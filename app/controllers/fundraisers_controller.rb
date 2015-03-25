@@ -28,9 +28,10 @@ class FundraisersController < ApplicationController
   end
 
   def update
+    @fundraiser = Fundraiser.find(params[:id])
     if @fundraiser.update_attributes(fundraiser_params)
       flash[:success] = "Fundraiser Updated"
-      redirect_to "/fundraiser/#{@fundraiser.id}"
+      redirect_to root_path 
     else
       render 'edit'
     end

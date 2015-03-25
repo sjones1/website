@@ -6,4 +6,6 @@
 <p>
 <%= @fundraiser.content %>
 </p>
-<%= link_to "Show all", fundraiser_path %>
+<%= link_to "Show all", fundraiser_path %> 
+| <%= link_to " edit", edit_fundraiser_path(@fundraiser), data: {no_turbolink: true} %> | 
+

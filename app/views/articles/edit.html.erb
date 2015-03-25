@@ -1,0 +1,19 @@
+<% provide(:title, "Edit article") %>
+<h1>Updating Article</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@article) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :title, "Title:" %>
+      <%= f.text_field :title %>
+<br>
+      <%= f.label :content, "Content:" %>
+      <%= f.text_area :content, :cols => "60", :rows => "10" %>
+<br>
+      <%= f.submit "Save changes", class: "btn btn-primary" %>
+    <% end %>
+
+  </div>
+</div>

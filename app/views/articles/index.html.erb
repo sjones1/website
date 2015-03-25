@@ -1,0 +1,27 @@
+<% provide(:title, 'News') %>
+<h1>News</h1>
+
+
+<% if current_user.teacher? %>
+<center><%= link_to "Create news!", new_article_url, class:"btn btn-primary", data: {no_turbolink: true} %></center>
+<% end %>
+<h2>
+<ul>
+  <% @articles.each do |a| %>
+ <li>
+    <%= a.title %>  
+|     <%= a.created_at.strftime('%d/%m/%Y') %>
+|     <%= link_to " Read More ...", a %> 
+<% if current_user.teacher? %> |  <%= link_to "Edit", edit_article_path(a) %> <% end %>
+
+  <% if current_user.teacher? %>
+    | <%= link_to "Delete", a, method: :delete,
+                                  data: { confirm: "Are you sure?" } %>
+  <% end %>
+
+
+    </li>
+    
+  <% end %>
+</ul>
+</h2>

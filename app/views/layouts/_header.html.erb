@@ -10,6 +10,7 @@
         <% if logged_in? %>
           <li class="btn-default">  <% if current_user.admin? %>  <%= link_to "Users", users_path, id:'logo2' %>  <% end %>   </li>
           <li class="btn-default"> <%= link_to "Fundraisers", fundraiser_path, id:'logo2' %> </li>
+          <li class="btn-default"><%= link_to "News", articles_path, id:'logo2' %></li>
           <li class="dropdown" class="btn-default" id="logo2">
             <a href="#"  data-toggle="dropdown" id="logo2">
               Account <b class="caret"></b>

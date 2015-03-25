@@ -1,10 +1,10 @@
 <% provide(:title, "Editing #{@fundraiser.title}") %>
-<h1> New Event: </h1>
+<h1> Edit Event: </h1>
 
 <div class="row">
   <div class="col-md-8 col-md-offset-3">
 <table>
-    <%= form_for(@fundraiser) do |f| %>
+    <%= form_for(@fundraiser, method: "patch") do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
 <tr>
 <td>      <%= f.label :title, "Title:" %>
