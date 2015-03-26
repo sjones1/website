@@ -1,25 +1,26 @@
-<% provide(:title, "Events") %>
+<% provide(:title, 'All events') %>
+<h1>All events</h1>
 
-
-<h1>Fundraising events! </h1>
 <% if current_user.teacher? %>
-<center><%= link_to "Create a fundraising activity!", new_fundraiser_url, class:"btn btn-primary", data: {no_turbolink: true} %></center>
+<center><%= link_to "Create fundraiser!", new_fundraiser_url, class:"btn btn-primary", data: {no_turbolink: true} %></center>
 <% end %>
-<ul class="users">
+<h2>
+
+
+
+<ul>
   <% @fundraisers.each do |f| %>
     <li>
-      <h4><%= f.title %> on <%= f.date %>  <%= link_to "more details...", "fundraisers/#{f.id}" %>
-
+      <%= f.title %> from / on <%= f.date %> 
+|     <%= link_to "More Details..." , f %>
 <% if current_user.teacher? %>
-|
-<%= link_to " edit", edit_fundraiser_path(f), data: {no_turbolink: true} %> | 
-<%= link_to " delete", "fundraisers/#{f.id}", method: :delete, data: {confirm: "Are you sure you want to delete #{f.title} ?" } %>
-<% end %>
-</h4>
+    | <%= link_to "Edit", edit_fundraiser_path(f) %>
+    | <%= link_to "Delete", f, method: :delete,
+                                  data: { confirm: "Are you sure?" } %>
+  <% end %>
 
     </li>
   <% end %>
 </ul>
 
-
-
+</h2>

@@ -1,11 +1,16 @@
 <% provide(:title, @fundraiser.title) %>
-<h2>
-<%= @fundraiser.title %>, on <%= @fundraiser.date %>
-</h2>
-<br>
-<p>
-<%= @fundraiser.content %>
-</p>
-<%= link_to "Show all", fundraiser_path %> 
-| <%= link_to " edit", edit_fundraiser_path(@fundraiser), data: {no_turbolink: true} %> | 
 
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h2>
+<%= @fundraiser.title %>
+      </h2>
+
+<%= @fundraiser.content %>
+
+
+<%= link_to "Show all", fundraisers_path %>
+    </section>
+  </aside>
+</div>

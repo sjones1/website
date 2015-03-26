@@ -1,40 +1,22 @@
-<% provide(:title, "Editing #{@fundraiser.title}") %>
-<h1> Edit Event: </h1>
+<% provide(:title, "Edit fundraiser") %>
+<h1>Update fundraiser</h1>
 
 <div class="row">
-  <div class="col-md-8 col-md-offset-3">
-<table>
-    <%= form_for(@fundraiser, method: "patch") do |f| %>
-    <%= render 'shared/error_messages', object: f.object %>
-<tr>
-<td>      <%= f.label :title, "Title:" %>
-<td width="5px">
-<td>      <%= f.text_field :title, :placeholder => "Title..." %>
-<td width="5px">
-<td>      <%= f.label :date, "Date:" %>
-<td width="5px">
-<td>      <%= f.date_select(:date, :start_year => 2015) %>
-<tr>
-<td>      <%= f.label :content, "Details:" %>
-<td width="5px">
-</table>      <%= f.text_area :content, :placeholder => "Include your description here.", :cols => "60", :rows => "10" %>
-<table>
-<tr>
-<td>
-<td width="10px">
-<td>      <%= f.submit "Publish", class: "btn btn-primary" %>
-    <% end %>
-</table>
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@fundraiser) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
 
+      <%= f.label :title, 'Title:' %>
+      <%= f.text_field :title %>
 <br>
+      <%= f.label :date, "Date:" %>
+      <%= f.date_select :date %>
+<br>
+      <%= f.label :content %> <br>
+      <%= f.text_area :content, :cols => "60", :rows => "10" %>
+<br>
+      <%= f.submit "Save changes", class: "btn btn-primary" %>
+    <% end %>
 
-Points for the description may include: <br>
-<ul>
-<li>Details such as when and where the activity will take place </li>
-<li>What the activity is </li>
-<li>How people can donate/sponsor </li>
-<li>How to book, if booking is necessary </li>
-</ul>
   </div>
 </div>
-

@@ -2,11 +2,11 @@ Rails.application.routes.draw do
 
 
   get 'articles/new'
+  get 'fundraisers/new'
+  get 'fundraisers' => 'fundraisers#index'
 
   root 'static_pages#home'
 
-  get 'new_fundraiser' => 'fundraisers#new'
-  get 'fundraiser' => 'fundraisers#index'
   get 'donate' => 'static_pages#donate'
   get 'home' => 'static_pages#home'
   get 'help' => 'static_pages#help'
