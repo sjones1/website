@@ -7,7 +7,7 @@
 <%= @fundraiser.title %>
       </h2>
 
-<%= @fundraiser.content %>
+<%= simple_format(@fundraiser.content) %>
 
 
 <%= link_to "Show all", fundraisers_path %>

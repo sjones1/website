@@ -21,6 +21,9 @@
 <% if current_user.admin? %>
       <%= f.label :teacher, "Teacher?" %>
       <%= f.check_box :teacher, class: 'form-control' %>
+
+      <%= f.label :participant, "Participant?" %>
+      <%= f.check_box :participant, class: 'form-control' %>
 <% end %>
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
