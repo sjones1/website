@@ -5,6 +5,7 @@
     
       <ul class="nav navbar-nav navbar-right">
         <li class="btn-default"><%= link_to "Home", root_path, id:'logo2' %></li>
+        <li class="btn-default"><%= link_to "Donate", donate_path, id:'logo2' %></li>
         <li class="btn-default"><%= link_to "About", about_path, id:'logo2' %></li>
         <li class="btn-default"><%= link_to "Help", help_path, id:'logo2' %></li>
         <% if logged_in? %>
@@ -14,7 +15,7 @@
 
           <li class="btn-default"> <%= link_to "Fundraisers", fundraisers_path, id:'logo2' %> </li>
           <li class="btn-default"><%= link_to "News", articles_path, id:'logo2' %></li>
-          <li class="dropdown" class="btn-default" id="logo2">
+          <li class="dropdown, btn-default" class="btn-default" id="logo2">
             <a href="#"  data-toggle="dropdown" id="logo2">
               Account <b class="caret"></b>
             </a>

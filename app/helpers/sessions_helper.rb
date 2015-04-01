@@ -56,5 +56,4 @@ module SessionsHelper
     session[:forwarding_url] = request.url if request.get?
   end
 
-
 end

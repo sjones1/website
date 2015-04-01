@@ -5,7 +5,6 @@
 <%= will_paginate @microposts %>
 
 <% @microposts.each do |p| %>
-
 <%= p.title %>, <br> <%= simple_format(p.content) %> <br>
 <%= p.created_at.strftime('%d/%m/%Y') %>
 <br>

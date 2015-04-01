@@ -9,15 +9,51 @@
       </section>
     </aside>
     <div class="col-md-8">
-      <h3>My Feed</h3>
+      <h3>My Posts</h3>
       <%= render 'shared/feed' %>
     </div>
 
 
 <% else %>
 
+  <div id="images" style="height:200px">
+<%= image_tag("lake.jpg", :alt => "A large lake in Botswana with the sunlight reflecting off the surface", height: "100%") %>
+<%= image_tag("elephant.jpg", :alt => "An elephant bathing", height: "100%") %>
+<%= image_tag("okovanadelta.jpg", :alt => "The delta", height: "100%") %>
+<%= image_tag("tree.jpg", :alt => "The delta", height: "100%") %>
+  </div>
+
+</div>
+
+<p align="center">
+ Botswana is one of the world's most beautiful places!
+    It's landmarks such as the Okavana Delta that make Botswana such an extraordinary place. <br>
+</p>
+
+<center>
+<%= image_tag 'facts.png', alt: "facts" %>
+</center>
 
 
+<% if current_user.group1? or current_user.teacher? %>
+<h2>Group 1 itinery and times: </h2>
+<center>
+<ul>
+<li>'Yet to be confirmed'</li>
+</ul>
+</center>
+<% end %>
+
+<% if current_user.group2? or current_user.teacher? %>
+
+<h2>Group 2 itinery and times: </h2>
+<center>
+<ul>
+<li>'Yet to be confirmed'</li>
+</ul>
+</center>
+<% end %>
+</p>
 
 <% end %>
   </div>

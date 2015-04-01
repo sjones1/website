@@ -1,6 +1,8 @@
 <center><%= link_to gravatar_for(current_user, size: 10), current_user %></center>
 <h2 style="font-size:28px;"> Welcome <%= current_user.name %></h2>
 <% if current_user.teacher? %>
+<% if current_user.admin? %>
 <span><%= link_to "view my profile", current_user %></span>
+<% end %>
 <span><%= pluralize(current_user.microposts.count, "post") %></span>
 <% end %>
