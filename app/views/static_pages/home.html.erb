@@ -15,14 +15,14 @@
 
 
 <% else %>
-
+<center>
   <div id="images" style="height:200px">
 <%= image_tag("lake.jpg", :alt => "A large lake in Botswana with the sunlight reflecting off the surface", height: "100%") %>
 <%= image_tag("elephant.jpg", :alt => "An elephant bathing", height: "100%") %>
 <%= image_tag("okovanadelta.jpg", :alt => "The delta", height: "100%") %>
 <%= image_tag("tree.jpg", :alt => "The delta", height: "100%") %>
   </div>
-
+</center>
 </div>
 
 <p align="center">
@@ -60,7 +60,7 @@
 <% else %>
 
 
-    <h1>Welcome to explorebotswana.com</h1>
+    <h1>Welcome to explorebotswana.herokuapp.com</h1>
 
     <h2>
       Here you can find information about our
@@ -74,6 +74,8 @@
 <br>
 <p>
 To keep up to date with news about fundraising events and expedition news please create an account, else you can find more information on the about page. </p>
+<br>
+<h2 style="font-size:28px"> Please <%= link_to "login", login_path %> for more information </h2>
 <br>
 <br>
     <%= link_to "New User? No problem, sign up now!", signup_path, data: {no_turbolink: true}, class: "btn btn-lg btn-primary" %>
