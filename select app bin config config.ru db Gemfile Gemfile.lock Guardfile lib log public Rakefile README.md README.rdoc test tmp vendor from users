@@ -1,0 +1,16 @@
+                     List of relations
+ Schema |         Name         |   Type   |     Owner      
+--------+----------------------+----------+----------------
+ public | articles             | table    | dhkhqhnltympbz
+ public | articles_id_seq      | sequence | dhkhqhnltympbz
+ public | fundraisers          | table    | dhkhqhnltympbz
+ public | fundraisers_id_seq   | sequence | dhkhqhnltympbz
+ public | microposts           | table    | dhkhqhnltympbz
+ public | microposts_id_seq    | sequence | dhkhqhnltympbz
+ public | relationships        | table    | dhkhqhnltympbz
+ public | relationships_id_seq | sequence | dhkhqhnltympbz
+ public | schema_migrations    | table    | dhkhqhnltympbz
+ public | users                | table    | dhkhqhnltympbz
+ public | users_id_seq         | sequence | dhkhqhnltympbz
+(11 rows)
+
