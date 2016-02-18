@@ -2,6 +2,11 @@
 <h1>About</h1>
 <p>
 
+#<% if current_user.group1? or current_user.group2? or current_user.teacher? %>
+<%= link_to 'KIT LIST', '/assets/documents/kitlist.pdf' %>
+
+#<% end %>
+
 <h2>During the summer of 2016 two groups of <a href="https://www.st-nicholas.cheshire.sch.uk" target="blank"> St Nicholas High School </a> sixth form students will be going to Botswana to...</h2>
 <ul style="text-align:centre;">
 <li> Aid local people in the development of the Karma wildlife sanctuary </li>

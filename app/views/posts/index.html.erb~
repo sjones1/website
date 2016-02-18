@@ -2,7 +2,7 @@
 
 <h2 style="font-size:24px;"> News about Botswana for participants. </h2>
 #<% if current_user.group1? or current_user.group2? or current_user.teacher? %>
-<%= link_to 'KIT LIST', '/resource/kitlist.pdf' %>
+<%= link_to 'KIT LIST', '/assets/documents/kitlist.pdf' %>
 
 #<% end %>
 <%= will_paginate @microposts %>
