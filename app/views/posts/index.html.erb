@@ -5,7 +5,7 @@
 <br>
 
 <h3>
-<% if current_user.group1? or current_user.group2? or current_user.teacher? %>
+<% if current_user.group1? or current_user.group2? or current_user.teacher? or current_user.participant? %>
 <%= link_to 'KIT LIST', '/resource/kitlist.pdf', :target => "_blank" %>
 
 <% end %>
