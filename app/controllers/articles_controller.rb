@@ -16,6 +16,7 @@ class ArticlesController < ApplicationController
       flash[:success] = "News Uploaded"
       redirect_to @article
     else
+      flash[:error] = @article.errors.first
       render 'new'
     end
   end
@@ -34,13 +35,13 @@ class ArticlesController < ApplicationController
       flash[:success] = "Updated"
       redirect_to @article
     else
+      flash[:error] = @article.errors.first
       render 'edit'
     end
   end
 
   def destroy
-    Article.find(params[:id]).destroy
-    flash[:success] = "Article deleted"
+    Article.find_by_id(params[:id]).try(:delete) ? flash[:success] = "Article deleted" : flash[:error] = "Something went wrong!"
     redirect_to articles_url
   end
 
